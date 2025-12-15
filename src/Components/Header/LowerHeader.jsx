@@ -1,20 +1,30 @@
 import React from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-import classes from "./Header.module.css"; // same CSS module
+import styles from "./LowerHeader.module.css";
+import { Link } from "react-router-dom";
 
 function LowerHeader() {
   return (
-    <nav className={classes.lower_container}>
-      <ul className={classes.navList}>
-        <li className={`${classes.navItem} ${classes.all}`}>
-          <AiOutlineMenu className={classes.menuIcon} />
+    <nav className={styles.lowerHeader}>
+      <ul className={styles.navList}>
+        <li className={`${styles.navItem} ${styles.all}`}>
+          <span className={styles.menuIcon}>☰</span>
           <p>All</p>
         </li>
-        <li className={classes.navItem}>Today's Deals</li>
-        <li className={classes.navItem}>Customer Service</li>
-        <li className={classes.navItem}>Registry</li>
-        <li className={classes.navItem}>Gift Cards</li>
-        <li className={classes.navItem}>Sell</li>
+        <li className={styles.navItem}>
+          <Link to="/deals">Today's Deals</Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link to="/customer-service">Customer Service</Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link to="/registry">Registry</Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link to="/gift-cards">Gift Cards</Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link to="/sell">Sell</Link>
+        </li>
       </ul>
     </nav>
   );

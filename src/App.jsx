@@ -1,23 +1,15 @@
-
-import Header from './Components/Header/Header'
-import LowerHeader from './Components/Header/LowerHeader'
-import Carousel from './Components/Carousel/Carousel'
-import Category from './Components/Category/Category';
-import Product from './Components/Product/Product';
-
-
+import React from "react";
+import AppRouter from "./AppRouter";
+import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./Components/Header/Header"; // ✅ import Header once
 
 function App() {
- 
   return (
-    <div>
-      <Header />
-      <LowerHeader />
-      <Carousel />
-      <Category />
-      <Product/>
-    </div>
+    <Router>
+      
+      <AppRouter />
+    </Router>
   );
 }
 
-export default App
+export default App;
